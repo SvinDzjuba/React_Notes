@@ -2,12 +2,12 @@ body {
   background-color: #061727;
 }
 
-.notes {
+.posts_page {
   margin: 40px auto;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.notes h1 {
+.posts_page h1 {
   text-align: center;
   font-size: 38px;
 }
