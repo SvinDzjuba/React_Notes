@@ -4,7 +4,8 @@ body {
 
 .posts_page {
   margin: 40px auto;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .posts_page h1 {
@@ -24,7 +25,6 @@ body {
     width: 98vw;
     margin: 5px auto;
   }
-  
 }
 
 .posts_page .posts_container {
@@ -88,9 +88,9 @@ body {
     border-right: none;
   }
   .posts_container .posts_header {
-      flex-wrap: wrap;
-      justify-content: center;
-      padding-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 10px;
   }
   .posts_container .posts_header div {
     width: 55%;
@@ -123,13 +123,13 @@ body {
   margin-bottom: 0 !important;
 }
 
-.post h2 {
+.posts_container .post h2 {
   font-size: 22px;
   padding-bottom: 7px;
   border-bottom: 2px solid rgb(255, 255, 255);
 }
 
-.post p {
+.posts_container .post p {
   font-size: 16px;
   color: rgb(173, 173, 173);
   padding-bottom: 7px;
@@ -158,7 +158,7 @@ body {
   font-size: 18px;
   border: none;
   letter-spacing: 1px;
-  transition: ease all .2s;
+  transition: ease all 0.2s;
 }
 
 .post .bottom div input:focus-visible {
@@ -178,4 +178,43 @@ body {
 
 .post .bottom button:not(div button) {
   width: 30%;
+}
+
+/* POST PAGE */
+.post_page {
+  margin: 40px auto;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.post_page .post_container {
+  margin: 0 auto;
+  width: 50%;
+  border: 1px solid gray;
+  box-shadow: 0 0 10px 1px #ccc;
+  border-radius: 5px;
+  padding: 25px;
+}
+.post_container .post .top {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+.post_container .post .top h2 {
+  font-size: 30px;
+  text-align: center;
+}
+.post_container .post .top input {
+  display: none;
+}
+.post_container .post .top button > svg {
+  transform: scale(1.3);
+  margin-top: -2px;
+  color: #ccc;
+}
+.post_container .comment .profile_img {
+  width: 40px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.post_container .comment .profile_img svg {
+  width: 100%;
+  height: 100%;
 }

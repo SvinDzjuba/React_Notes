@@ -5,10 +5,10 @@ const Posts = () => {
     let posts = require('../data/posts.json');
     let comments = require('../data/comments.json');
     let data = [];
-    for (let i = 1; (i - 1) < posts.length; i++) {
+    for (let i = 0; i < posts.length; i++) {
         let answers = [];
         for (let j = 0; j < comments.length; j++) {
-            if(comments[j].postId === posts[i].id) {
+            if (comments[j].postId === posts[i].id) {
                 answers.push(comments[j]);
             }
         }
@@ -18,7 +18,7 @@ const Posts = () => {
         };
         data.push(obj);
 
-        if(i === 15) break;
+        if (i === 14) break;
     }
     return (
         <div className="posts_page">
@@ -34,7 +34,7 @@ const Posts = () => {
                     {
                         data.map(data => {
                             return (
-                                <div className="post">
+                                <div key={data.post.id} className="post">
                                     <h2>{data.post.title}</h2>
                                     <p>{data.post.body}</p>
                                     <div className="bottom">
@@ -42,7 +42,7 @@ const Posts = () => {
                                             <input type="text" placeholder='Reply...' />
                                             <button className='btn'><FiSend /></button>
                                         </div>
-                                        <button className="btn btn-primary">Answers</button>
+                                        <a href={'/post/' + data.post.id} className="btn btn-primary">Answers</a>
                                     </div>
                                 </div>
                             )
