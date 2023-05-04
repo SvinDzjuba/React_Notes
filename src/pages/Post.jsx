@@ -12,6 +12,7 @@ export default function Post() {
     comments = comments.filter(comment => comment.postId === Number(id));
     return (
         <div className="post_page">
+            <a href='/' className="btn btn-outline-secondary position-absolute top-0 m-3">Back to posts</a>
             <div className="post_container">
                 <div className="post">
                     <div className="top d-flex justify-content-between">
@@ -39,6 +40,7 @@ export default function Post() {
                     </div>
                     <div className="comments_container my-3 border-top border-2 pt-2">
                         <h3 className='text-center mb-3 mt-2'>Comments</h3>
+                        <p className='text-center mb-0'>{comments.length === 0 ? 'There are no comments yet!' : ''}</p>
                         {
                             comments.map(comment => {
                                 return (

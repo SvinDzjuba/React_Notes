@@ -42,7 +42,7 @@ const Posts = () => {
                                             <input type="text" placeholder='Reply...' />
                                             <button className='btn'><FiSend /></button>
                                         </div>
-                                        <a href={'/post/' + data.post.id} className="btn btn-primary">Answers</a>
+                                        <a href={'/post/' + data.post.id} className="btn btn-primary">Comments</a>
                                     </div>
                                 </div>
                             )
